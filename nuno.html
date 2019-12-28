@@ -1,0 +1,829 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <!-- Our Custom CSS -->
+  <link rel="stylesheet" href="categories.css">
+  <!-- Scrollbar Custom CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+  <!-- Font Awesome JS -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <title>Nuno</title>
+
+</head>
+<body>
+  <!-- Start Wrapper -->
+  <div class="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar">
+      <div class="sidebar-header">
+        <h3> </h3>
+      </div>
+
+      <ul class="components game-nav">
+        <li>
+          <span class="fas fa-volleyball-ball"></span>
+          <a href="#">Action</a>
+        </li>
+        <li>
+          <span class="fa fa-chess-queen"></span>
+          <a href="#">Logic</a>
+        </li>
+        <li>
+          <span class="fab fa-fort-awesome"></span>
+          <a href="#">Strategy</a>
+        </li>
+        <li>
+          <span class="fas fa-comments"></span>
+          <a href="#" onclick="show('Page-Topic')">Community</a>
+        </li>
+      </ul>
+
+      <ul class="CTAs">
+        <li>
+          <a href="#contact" class="download" onclick="show('Page-Home')">Contact Us</a>
+        </li>
+        <li>
+          <a href="#content" class="article">Back To Top</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Start Page Content -->
+    <div id="content" style="background: url(img/bg.jpg); background-size: 100%;">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <a href="#" onclick="show('Page-Home')"class="navbar-brand" id="logo"><img src="nuno_img/nuno.png"></a>
+          <!-- Side Navigation -->
+          <button type="button" id="sidebarCollapse" class="btn btn-info mr-auto">
+            <i class="fas fa-align-left"></i>
+            <span></span>
+          </button>
+          <!-- Top Navigation -->
+
+          <button type="button" class="navbar-toggler custom-toggler btn btn-dark" data-toggle="collapse"
+          data-target="#navbarResponsive">
+          <i class="fas fa-align-justify"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="#" onclick="show('Page-Home')" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a id="myAccount" href="#" onclick="show('Page-Login')" class="nav-link">Login</a>
+            </li>
+			<li id="logOut" class="nav-item" style="display: none;">
+			  <a href="#" onclick="logout()" class="nav-link">Logout</a>
+			</li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navigation -->
+
+    <!-- Start Page Home -->
+    <div id="Page-Home" class="page" style="">
+      <!-- Start Image Slider -->
+      <div id="carouselExampleIndicators"class="carousel slide" data-ride="carousel"
+      data-interval="7000">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0"
+          class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <img src="nuno_img/battlefield.png">
+			<embed style="POSITION: absolute; TOP: 50%; LEFT:3%; width:40%; HEIGHT:40%" align=center src=background.swf type=application/x-shockwave-flash wmode="transparent" quality="high" ;> </embed>
+			</img>
+            <div class="carousel-caption text-center">
+              <h1>Welcome to Nuno</h1>
+              <h3>Join us now</h3>
+              <a id="SU1" href="#" class="btn btn-outline-light btn-lg sign-btn">Sign Up</a>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <img src="nuno_img/aim.jpg">
+            <div class="carousel-caption text-center">
+              <h1>Coming Soon</h1>
+              <a id="SU2" href="#" class="btn btn-outline-light btn-lg sign-btn">Sign Up</a>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <img src="nuno_img/run.jpg">
+            <div class="carousel-caption text-center">
+              <h1>Coming Soon</h1>
+              <a id="SU3" href="#" class="btn btn-outline-light btn-lg sign-btn"> Sign Up</a>
+            </div>
+          </div>
+        </div>
+        <!-- End Carousel Inner -->
+
+        <!-- Prev & Next Buttons -->
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+        data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+        data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+      </div>
+      <!-- End Image Slider Section -->
+
+      <!-- Satrt Course Section -->
+      <div id="course">
+          <div class="col-12 narrow text-center">
+            <h1>Welcome to Nuno</h1>
+            <p class="lead"> one of the best online game platforms for kids</p>
+            <a href="#" class="btn btn-secondary btn-md sign-btn">Register</a>
+          </div>
+      </div>
+      <!-- End Course Section -->
+
+      <!-- Satrt Features Section -->
+      <div id="features" >
+        <div class="jumbotron">
+          <div class="narrow">
+            <div class="row text-center">
+              <div class="col-12">
+                <h3 class="heading">Features</h3>
+                <div class="heading-underline"></div>
+              </div>
+              <div class="col-md-4">
+                <div class="feature">
+                  <i class="fas fa-play-circle fa-4x" data-fa-transform="up-5"></i>
+                  <h3>Custom Anmiation</h3>
+                  <p> one of the best online game platforms for kids </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="feature">
+                  <i class="fas fa-sliders-h fa-4x" data-fa-transform="up-4.5"></i>
+                  <h3>Content Slider</h3>
+                  <p>  one of the best online game platforms for kids </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="feature">
+                  <i class="fab fa-wpforms fa-4x" data-fa-transform="up-5"></i>
+                  <h3>Online Forum</h3>
+                  <p>one of the best online game platforms for kids</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Features Section -->
+
+      <!-- Satrt Resources Section -->
+      <div id="resources">
+          <div class="fixed-background">
+            <div class="row dark text-center">
+              <div class="col-12">
+                <h3 class="heading">Built With Care</h3>
+                <div class="heading-underline"></div>
+              </div>
+
+              <div class="col-sm-12 col-md-4">
+                <h3>HTML5</h3>
+                <i class="fas fa-code fa-3x"></i>
+                <p>Built with the latest version of HTML, HTML5</p>
+              </div>
+
+              <div class="col-sm-12 col-md-4">
+                <h3>Bootstrap 4</h3>
+                <i class="fas fa-bold fa-3x"></i>
+                <p>Built with the latest version of Bootstrap, Bootstrap4</p>
+              </div>
+              <div class="col-sm-12 col-md-4">
+                <h3>CSS 3</h3>
+                <i class="fab fa-css3 fa-3x"></i>
+                <p>Built with the latest version of CSS, CSS 3</p>
+              </div>
+
+            </div>
+            <!-- End Row Dark -->
+            <div class="fixed-wrap">
+              <div class="fixed">
+
+              </div>
+            </div>
+          </div>
+      </div>
+      <!-- End Resources Section -->
+
+      <!-- Satrt Clients Section -->
+      <div id="clients">
+        <!-- Start Jumbotron -->
+        <div class="jumbotron">
+          <div class="col-12 text-center">
+            <h3 class="heading">Meet the Team</h3>
+            <div class="heading-underline"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 clients">
+              <div class="row">
+                <div class="col-md-4">
+                  <img src="nuno_img/client3.jpg" alt="">
+                </div>
+                <div class="col-md-8">
+                  <blockquote style="-webkit-text-fill-color: #FFFFFF;">
+                    <i class="fas fa-quote-left"></i>
+                    To succeed in this world, we must stick to it; Sword to death can off hand.
+                    <hr class="clients-hr">
+                    <cite>&#8212; ChenYu, Xiamen University</cite>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 clients">
+              <div class="row">
+                <div class="col-md-4">
+                  <img src="nuno_img/client2.JPG" alt="">
+                </div>
+                <div class="col-md-8">
+                  <blockquote style="-webkit-text-fill-color: #FFFFFF;">
+                    <i class="fas fa-quote-left"></i>
+                    Happiness is like being cool, the harder you try the less it’s going to happen. So stop trying. Start living.
+                    <hr class="clients-hr">
+                    <cite>&#8212; HuangJiaqi, Xiamen University</cite>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 clients">
+              <div class="row">
+                <div class="col-md-4">
+                  <img src="nuno_img/client1.png" alt="">
+                </div>
+                <div class="col-md-8">
+                  <blockquote style="-webkit-text-fill-color: #FFFFFF;">
+                    <i class="fas fa-quote-left"></i>
+                    Curious about life of comprehensiveness, the secret of success is still a great creative people.
+                    <hr class="clients-hr">
+                    <cite>&#8212; ChenXinjie, Xiamen University</cite>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End ROw -->
+        </div>
+        <!-- End Jumbotron -->
+      </div>
+      <!-- End Clients Section -->
+    </div>
+    <!-- End Page Home -->
+
+    <!-- Start Page Action -->
+    <div id="Page-Game" class="page" style="display:none">
+      <!-- Start Image Slider -->
+      <div id="carouselExampleIndicators"class="carousel slide" data-ride="carousel"
+      data-interval="7000">
+
+        <div class="carousel-inner" role="listbox">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <img id="game-page-img" src="img/action5.jpg" >
+            <div class="carousel-caption text-center">
+              <h1>Welcome to Nuno</h1>
+              <h3>Join us now</h3>
+              <a id="SU4" href="#" class="sign-btn btn btn-outline-light btn-lg" onclick="show('Page-Login')">Sign Up</a>
+            </div>
+          </div>
+      </div>
+      <!-- End Image Slider Section -->
+
+      <!-- Satrt Features Section -->
+      <div id="features">
+        <div class="jumbotron">
+          <div class="narrow">
+
+            <div class="row text-center">
+              <div class="col-12">
+                <h3 id="game-heading" class="heading">Action  Game</h3>
+                <div class="heading-underline"></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--- Cards -->
+      <!-- <div class="container-fluid padding">
+        <div id="game-collection" class="row align-items-center">
+          <div class="col-lg-4 col-md-6 col-sm-12 padding">
+            <div class="card text-center text-white">
+              <img class="card-img my-card-img" src="img/action2.jpg" alt="Card image">
+              <div class="card-img-overlay">
+                <h5 class="card-title">Title</h5> -
+                <a href="#" class="btn btn-primary">Play</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div> -->
+
+      <section class="container">
+        <div id="game-collection" class="row">
+          <div class="col-lg-3 col-md-4 col-sm-6 padding">
+            <div class="card border-dark">
+              <img src="img/action2.jpg" style="height: 180px;" class="card-top-img">
+              <div class="card-body">
+                <h3>Title</h3>
+                <a href="#" class="btn btn-outline-dark btn-lg">PLAY</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </div>
+    <!-- End Page Action -->
+
+    <!-- Start Page Topic -->
+    <div id="Page-Topic" class="page" style="display:none">
+      <!-- Satrt Page Header Section -->
+      <div id="resources">
+        <div class="row dark text-center">
+          <div class="col-12">
+            <h3 class="heading">Community</h3>
+            <div class="heading-underline"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container my-3">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="h4 bg-dark mb-0 p-4 rounded-top text-white">Forum</h2>
+            <table class="table table-bordered table-responsive mb-xl-0 my-forum">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col" class="forum-col">Topic</th>
+                  <th scope="col">Posts</th>
+                  <th scope="col" class="last-post-col">Last Post</th>
+                </tr>
+              </thead>
+              <tbody id="forum_topic">
+                <tr>
+                  <td>
+                    <h3 class="h5 mb-0"><a id="Topic-Post" href="#" class="1">COD</a></h3>
+                    <p class="mb-0">“True happiness occurs only when you find the problems you enjoy having and enjoy solving.”</p>
+                  </td>
+                  <td>
+                    <div>18</div>
+                  </td>
+                  <td>
+                    <p>2019-12-12</p>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+
+              <form class="mt-5" id='post-form'>
+                <div class="form-group">
+                  <label for="comment">Add a Topic:</label>
+                  <textarea id="topic_text"class="form-control" id="comment" rows="2" placeholder="Write a topic here." required=""></textarea>
+                </div>
+                <button id="topic_submit" class="btn btn-primary">Add</button>
+                <button type="reset" class="btn btn-danger">Reset</button>
+              </form>
+            </div>
+          </div>
+      </div>
+    </div>
+    <!-- End of Page Topic -->
+
+    <!-- Start Page Post -->
+    <div id="Page-Post" class="page" style="display:none">
+      <div class="container my-3">
+        <nav class="breadcrumb">
+          <a id="forum_breadcrumb" href="#" class="breadcrumb-item">Forum</a>
+          <a href="#" class="breadcrumb-item">Topic</a>
+        </nav>
+        <!-- Start of Row -->
+        <div class="row">
+          <div class="col-12">
+            <h2 id="forum_post_title" class="h4 text-white bg-dark mb-0 p-4 rounded-top">COD</h2>
+            <!-- Start of Table -->
+            <table class="table table-striped table-bordered table-responsive-lg my-forum">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">Author</th>
+                  <th scope="col">Message</th>
+                </tr>
+              </thead>
+              <tbody id="forum_post">
+                <!-- Satrt of a Post -->
+                <!-- Row 1 -->
+                <!-- <tr>
+                  <td class="author-col">
+                    <div><a href="#">Mark Manson</a></div>
+                  </td>
+                  <td class="post-col">
+                    <div><span class="font-weight-bold">Posted:</span> 09 Dec 2019, 14:46</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <p>Because pain is the universal constant of life, the opportunities to grow from that pain are constant in life. All that is required is that we don't numb it, that we don't look away. All that is required is that we engage it and find the value and meaning in it.</p>
+                  </td>
+                </tr> -->
+                <!-- End of a Post -->
+              </tbody>
+            </table>
+            <!-- End of Table -->
+          </div>
+        </div>
+        <!-- End of Row -->
+        <form class="mb-3">
+          <div class="form-group">
+            <label for="comment" style="-webkit-text-fill-color: #FFFFFF;">Reply to this post:</label>
+            <textarea id="post_text" class="form-control" id="comment" rows="10" placeholder="Write your comment here." required=""></textarea>
+          </div>
+          <button id="post_submit" type="submit" class="btn btn-primary">Reply</button>
+          <button type="reset" class="btn btn-danger">Reset</button>
+        </form>
+      </div>
+    </div>
+    <!-- End Page Post -->
+
+	<!-- Userprofile -->
+	<div id="Page-Account" class="page" style="display: none;">
+		<div class="container" style="margin-top: 75px;background-color: #85929E;">
+			<div class="view-account" style="background-color: #D5D8DC;">
+				<setion class="module">
+					<div class="module-inner row">
+						<div class="side-bar col-md-4">
+							<div class="user-info"> <!-- === avatar === -->
+								<img id="curAvatar" class="img-profile img-circle img-responsive center-block" src="img/myAvatar1.png" alt="My Avatar">
+								<ul class="meta list list-unstyled">
+									<li id="UPMN" class="name">Jayce Numan
+										<label class="label label-info">Challenger</label>
+									</li>
+									<li id="UPEE" class="email"><a href="#">Username@xmum.edu.my</a></li>
+								</ul>
+							</div>
+							<nav class="side-menu">
+								<ul class="nav">
+									<li class="active"><a id="Prof" href="#" onclick="showp('Profile')"><span class="fa fa-user"></span> Profile &#160 &#160 </a></li>
+									<li><a id="Pass" href="#" onclick="showp('Password')"><span class="fa fa-lock"></span> Password&#160 </a></li>
+
+
+								</ul>
+							</nav>
+						</div>
+						<!-- =============Profile============== -->
+						<div id="Profile" class="content-panel col-md-8" style="display: block;">
+							<h2 class="title">Profile<span class="pro-label label label-warning">VIP</span></h2>
+							<form class="form-horizontal">
+								<fieldset class="fieldset">
+									<h3 class="fieldset-title">Personal Info</h3>
+									<div class="form-group avatar">
+										<figure class="figure col-md-2 col-sm-3">
+											<img class="img-rounded img-responsive" src="img/myAvatar1.png">
+											<input id="Av1" type="radio" name="avatar" value="img/myAvatar1.png" onclick="getValue(this)" disabled="disabled" checked=false>
+										</figure>
+										<figure class="figure col-md-2 col-sm-3">
+											<img class="img-rounded img-responsive" src="img/myAvatar2.png">
+											<input id="Av2" type="radio" name="avatar" value="img/myAvatar2.png" onclick="getValue(this)" disabled="disabled" checked=false>
+										</figure>
+										<figure class="figure col-md-2 col-sm-3">
+											<img class="img-rounded img-responsive" src="img/myAvatar3.png">
+											<input id="Av3" type="radio" name="avatar" value="img/myAvatar3.png" onclick="getValue(this)" disabled="disabled" checked=false>
+										</figure>
+										<figure class="figure col-md-2 col-sm-3">
+											<img class="img-rounded img-responsive" src="img/myAvatar4.png">
+											<input id="Av4" type="radio" name="avatar" value="img/myAvatar4.png" onclick="getValue(this)" disabled="disabled" checked=false>
+										</figure>
+										<br>
+
+
+
+
+
+									</div>
+									<div class="form-group">
+										<label class="col-md-12 col-sm-12 col-xs-12 control-label">User Name</label>
+										<div class="col-md-10 col-sm-9 col-xs-12">
+											<input id="UPU" type="text" class="form-control" value="cxj" readonly="readonly">
+
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-12 col-sm-12 col-xs-12 control-label">First Name</label>
+										<div class="col-md-10 col-sm-9 col-xs-12">
+											<input id="UPFN" type="text" class="form-control" value="" placeholder="Unfilled" readonly="readonly">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-12 col-sm-12 col-xs-12 control-label">Last Name</label>
+										<div class="col-md-10 col-sm-9 col-xs-12">
+											<input id="UPLN" type="text" class="form-control" value="" placeholder="Unfilled" readonly="readonly">
+										</div>
+									</div>
+
+								</fieldset>
+								<fieldset class="fieldset">
+									<h3 class="fieldset-title">Contact Info</h3>
+									<div class="form-group">
+										<label class="col-md-2 col-sm-3 col-xs-12 control-label">Email</label>
+										<div class="col-md-10 col-sm-9 col-xs-12">
+											<input id="UPE" type="email" class="form-control" value="Jayce@xmu.edu.my" placeholder="Unfilled" readonly="readonly">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-2 col-sm-3 col-xs-12 control-label">Twitter</label>
+										<div class="col-md-10 col-sm-9 col-xs-12">
+											<input id="UPT" type="text" class="form-control" value="" placeholder="Unfilled" readonly="readonly">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-2 col-sm-3 col-xs-12 control-label">Wechat</label>
+										<div class="col-md-10 col-sm-9 col-xs-12">
+											<input id="UPW" type="text" class="form-control" value="" placeholder="Unfilled" readonly="readonly">
+										</div>
+									</div>
+								</fieldset>
+								<hr>
+								<div class="form-group">
+									<div class="col-md-10 col-sm-9 col-xs-12">
+										<input id="BTN" type="button" class="btn btn-primary" value="Edit" onclick="updateProfile()">
+									</div>
+								</div>
+							</form>
+						</div>
+
+
+						<!-- =========RESET PASSWORD========= -->
+						<div id="Password" class="col-md-5 offset-1" style="display: none; margin-top: 100px; margin-bottom: 700px;">
+							<div class="form-group">
+								<label class="col-md-12 col-sm-12 col-xs-12 control-label">PASSWORD</label>
+								<div class="col-md-10 col-sm-9 col-xs-12">
+									<input id="UPRP" type="password" class="form-control" value="password" readonly="readonly">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-md-10 col-sm-9 col-xs-12">
+									<input id="UPCP" type="password" class="form-control" value="" placeholder="Confirm Your Password" style="display: none;">
+								</div>
+							</div>
+							<hr>
+							<div class="form-group">
+								<div class="col-md-10 col-sm-9 col-xs-12">
+									<input id="PAED" type="button" class="btn btn-primary" value="Reset Password" onclick="updatePassword()">
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		</div>
+	<!-- End Userprofile -->
+
+	<!-- Register -->
+	<div id="Page-Register" class="page" style="display: none;">
+		<div class="container">
+			<div class="modal-dialog text-center">
+				<div class="col-sm-8 main-section">
+					<div class="modal-content">
+
+						<div class="col-12 user-img">
+							<img src="img/unknown.jpg">
+						</div>
+						<div class="font-control">
+							Come & join us!
+						</div>
+						<form class="col-12">
+							<div class="form-group">
+								<input id="REU" type="text" class="form-control" placeholder="Enter username" required="required">
+							</div>
+							<div class="form-group">
+								<input id="REP"  type="password" class="form-control" placeholder="Enter password" required="required">
+							</div>
+							<div class="form-group">
+								<input id="REC" type="password" class="form-control" placeholder="Confirm password" required="required">
+							</div>
+							<div class="form-group">
+								<input id="REE"  type="email" class="form-control" placeholder="Enter your email" required="required">
+							</div>
+							<button type="button" class="btn" onclick="register()"><i class="fas fa-registered"></i>
+								Register
+							</button>
+
+						</form>
+					</div><!-- end of modal content -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End register -->
+
+	<!-- Login -->
+	<div id="Page-Login" class="page" style="display: none; margin-top: 200px;">
+		<div class="container">
+		<div class="modal-dialog text-center">
+			<div class="col-sm-8 main-section">
+				<div class="modal-content">
+
+					<div class="col-12 user-img">
+						<img src="img/myAvatar2.png">
+					</div>
+          <form class="col-12">
+						<div class="form-group">
+							<span class="fa fa-user" style="position: absolute; font-size: 30px; color: grey;left: 28px;padding-top: 8px;"></span>
+							<input id="LOU" type="text" class="form-control" placeholder="Enter username" required>
+						</div>
+						<div class="form-group">
+							<span class="fa fa-lock" style="position: absolute; font-size: 30px; color: grey;left: 28px;padding-top: 8px;"></span>
+							<input id="LOP" type="password" class="form-control" placeholder="Enter password" required>
+						</div>
+						<button type="button" class="btn" onclick="loGin()" ><i class="fas fa-sign-in-alt" style="margin-left: -20px;"></i>
+						Login
+						</button>
+
+						<button type="button" class="btn" onclick="show('Page-Register')"><i class="fas fa-registered"></i>
+							Register
+						</button>
+					</form>
+
+
+				</div><!-- end of modal content -->
+			</div>
+		</div>
+		</div>
+	</div>
+	<!-- End Page Login -->
+
+	<!-- Start Game Zone Page -->
+	<div id="Page-GameZone" class="page" style="display: none;">
+		<div class="container" style="margin-top: 75px; margin-bottom: 150px;">
+			<div class="row">
+				<div class="pregame-img">
+					<img src="img/gamepad.png" />
+					&#8195;&#8195;
+				</div>
+				<div>
+					<p id="GN" class="pregame-font" style="color: #F1F1F1;">Game Name</p>
+				</div>
+				<div class="pregame-img">
+					&#8195;&#8195;
+					<img src="img/gamepad.png" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-9 col-sm-11 col-xs-11">
+				<div id="GZ" class="game-zone ">
+							<div id="flashContent" class="col-md-9" style="position: relative; z-index: 2;">
+								<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="400" height="600" align="middle">
+									<param name="movie" id="GN1" value="game/魔法可可魔法斗地鼠.swf" />
+									<param name="quality" value="high" />
+									<param name="bgcolor" value="#666666" />
+									<param name="play" value="true" />
+									<param name="loop" value="true" />
+									<param name="wmode" value="window" />
+									<param name="scale" value="showall" />
+									<param name="menu" value="true" />
+									<param name="devicefont" value="false" />
+									<param name="salign" value="" />
+									<param name="allowScriptAccess" value="sameDomain" />
+									<!--[if !IE]>-->
+									<object id="GN3" type="application/x-shockwave-flash" style="margin-top: 2.2%;"  width="800px" height="600px">
+										<param name="movie" id="GN2" value="game/魔法可可魔法斗地鼠.swf" />
+										<param name="quality" value="high" />
+										<param name="bgcolor" value="#666666" />
+										<param name="play" value="true" />
+										<param name="loop" value="true" />
+										<param name="wmode" value="window" />
+										<param name="scale" value="showall" />
+										<param name="menu" value="true" />
+										<param name="devicefont" value="false" />
+										<param name="salign" value="" />
+										<param name="allowScriptAccess" value="sameDomain" />
+									<!--<![endif]-->
+										<a href="http://www.adobe.com/go/getflash">
+											<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="获得 Adobe Flash Player" />
+										</a>
+									<!--[if !IE]>-->
+									</object>
+									<!--<![endif]-->
+								</object>
+							</div>
+				</div>
+				</div>
+				<div class="document-zone col-md-3" id="desc">
+					<div>
+						<label class="doc-label">Operation method</label>
+						<div class="doc-content">
+							<p id="OM" class="cont-font">Beat up NPC using A W D</p>
+						</div>
+					</div>
+					<div>
+						<label class="doc-label">Game goal</label>
+						<div class="doc-content">
+							<p id="GG" class="cont-font">Reasonable operation, use your talent, and kill enemy</p>
+						</div>
+					</div>
+					<div>
+						<label class="doc-label">How to start</label>
+						<div class="doc-content">
+							<p id="HTS" class="cont-font">After the game is loaded, click [Start Game] to start the game.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<nav class="undergame-menu col-md-6" style="margin-top: 20px;">
+					<ul class="nav">
+						<li>
+							<span class="fas fa-chevron-circle-left" style="font-size: 20px;"></span>
+							<button onclick="show('Page-Game')">Return to Game List</button>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<!-- End Game Zone page -->
+
+
+    <!-- Satrt Contact Section -->
+    <div id="contact">
+      <footer>
+        <div class="row justify-content-center">
+          <div class="col-md-5 text-center">
+            <img src="nuno_img/nuno.png">
+            <p>One of the best online game platforms for kids.</p>
+            <strong>Contact Info</strong>
+            <p>(+60) 017-6513172<br>swe1709151@xmu.edu.my<br>swe1709068@xmu.edu.my<br>swe1709073@xmu.edu.my</p>
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-twitter-square"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+
+          <hr class="socket">
+          &copy; Nuno Theme.
+        </div>
+      </footer>
+    </div>
+    <!-- End Contact Section -->
+
+    </div>
+    <!-- End Content -->
+  </div>
+  <!-- End Wrapper -->
+
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!-- Popper.JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<!-- jQuery Custom Scroller CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function () {
+  $("#sidebar").mCustomScrollbar({
+    theme: "minimal"
+  });
+
+  $('#sidebarCollapse').on('click', function () {
+    $('#sidebar, #content').toggleClass('active');
+    $('.collapse.in').toggleClass('in');
+    // $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+  });
+});
+</script>
+
+  <script src="js/post.js"></script>
+</body>
+</html>
